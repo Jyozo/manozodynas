@@ -80,3 +80,7 @@ class WordTestCase(StatefulTesting):
             'foo': 'bar',
         })
         self.assertStatusCode(200)
+
+    def test_words_page(self):
+        self.open(reverse('words'))
+        self.assertStatusCode(200)

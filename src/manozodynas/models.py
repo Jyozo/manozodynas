@@ -45,7 +45,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         return self.first_name
 
 class Word(models.Model):
-    expression = models.CharField(max_length=31)
+    expression = models.CharField(max_length=50)
 
-    def __str__(self):
+    def __unicode__(self):
         return self.expression
