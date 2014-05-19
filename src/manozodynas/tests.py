@@ -66,3 +66,17 @@ class LoginTestCase(StatefulTesting):
         })
         self.assertStatusCode(200)
         self.selectOne('.errorlist')
+
+
+class WordTestCase(StatefulTesting):
+    def test_new_word_page(self):
+        self.open(reverse('add_word'))
+        self.assertStatusCode(200)
+
+    def test_new_word(self):
+        self.open(reverse('add_word'))
+        self.selectForm('#add_word-form')
+        self.submitForm({
+            'foo': 'bar',
+        })
+        self.assertStatusCode(200)

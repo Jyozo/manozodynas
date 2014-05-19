@@ -3,14 +3,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title></title>
+    <title>Words</title>
 </head>
 
 <body>
-<p>
-<a href="login">Login test</a><br>
-<a href="add_word">Add new word</a><br>
-<a href="words">See all words</a><br>
-</p>
+    {% for word in words %}
+    {{ word.expression }}
+    {% endfor %}
 </body>
 </html>
